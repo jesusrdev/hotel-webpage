@@ -1,0 +1,60 @@
+
+
+main .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+}
+
+
+.about-us h2 {
+  font-size: 2rem;
+}
+
+.about-us div {
+  margin: 10px 5px;
+  display: flex;
+  align-items: center;
+  
+  font-weight: 700;
+  font-family: 'Poppins';
+  font-size: 1rem;
+}
+
+.about-us div img {
+  margin: 10px;
+  width: 33px;
+
+}
+
+.about-us div a {
+  text-decoration: none;
+  color: black;
+  font-size: 700;
+}
+
+.about-us div a:hover {
+  text-decoration: underline;
+
+}
+
+main .contact form {
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+@media screen and (min-width: 768px) {
+  
+  main .contact {
+    flex-direction: row;
+  }
+
+  main h2 {
+    font-size: 2.5rem;
+  }
+
+
+
+}

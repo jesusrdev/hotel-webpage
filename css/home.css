@@ -1,0 +1,427 @@
+/*? Fuentes a usar  */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans&family=Playfair+Display:wght@700&family=Poppins:wght@500;600;700&family=Raleway:wght@400;600&display=swap");
+
+:root {
+  --principal-color: #d79d4f;
+  --background-color: #e5e5e5;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+/** ESTILOS PARA LA BARRA DE NAVEGACION */
+
+button {
+  display: flex;
+  justify-content: end;
+  height: 50px;
+  border: 0;
+  font-family: inherit;
+  color: white;
+  cursor: pointer;
+}
+
+.burger {
+  position: sticky;
+  background-color: var(--principal-color);
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  padding: 10px 20px;
+}
+
+body.open nav {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+  translate: 0 0;
+}
+
+nav {
+  width: 100vw;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--principal-color);
+  color: white;
+  /* min-height: 50px; */
+  height: 100vh;
+  z-index: 1;
+  opacity: 0;
+  visibility: 0;
+  
+  translate: 100% 0;
+  transition-property: translate,;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  
+}
+
+nav .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  /* justify-content: end; */
+  /* padding: 10px 30px; */
+  height: 100vh;
+}
+
+nav ul {
+  margin: 0 auto;
+  padding: 0;
+  /* height: 80%; */
+  list-style: none;
+}
+
+nav ul li {
+  margin: 50px;
+}
+
+nav ul li a {
+  padding: 0px 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+
+  /* transition-property: all; */
+  /* transition-duration: 0.5; */
+}
+
+nav ul li a:hover {
+  color: #d9d9d9;
+  font-weight: bolder;
+}
+
+
+/** ESTILOS PARA EL HEADER  */
+
+.header-home {
+  background-image: url(../images/room-home.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 9% 7%;
+}
+
+.header-home h1 {
+  color: white;
+  font-family: "Monserrat";
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.header-home h1 span {
+  display: block;
+  font-family: "Open Sans";
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  font-size: 3rem;
+  margin-top: 10px;
+}
+
+.header-home p {
+  margin-top: 30px;
+  color: white;
+  /* max-width: 400px; */
+  font-family: "Montserrat";
+  font-weight: 400;
+  line-height: 1.5em;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+}
+
+.reserve-button {
+  display: block;
+  font-family: "Monserrat";
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  background-color: var(--principal-color);
+  width: fit-content;
+  margin-top: 40px;
+  padding: 10px 13px;
+  border-radius: 5px;
+}
+
+.reserve-button:hover {
+  color: #d9d9d9;
+}
+
+/** ESTILOS PARA EL MAIN  */
+
+main {
+  margin: auto;
+  max-width: 1400px;
+  /* height: 500px; */
+  /* background-color: aqua; */
+}
+
+.welcome-home {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  margin: 8%;
+}
+
+.welcome-home img {
+  width: 100%;
+  max-height: 50vw;
+  object-fit: cover;
+}
+
+.welcome-home .welcome-text {
+  /* margin-bottom: 10px; */
+  width: 100%;
+}
+
+.welcome-home .welcome-text h2 {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.welcome-home .welcome-text p {
+  font-family: "Monserrat";
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.reviews-home {
+  /* width: 100%; */
+  text-align: center;
+  margin: 5%;
+  /* margin-top: 8%; */
+}
+
+.reviews-home h3 {
+  width: 80%;
+  margin: 40px auto;
+  font-family: "Playfair Display";
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.reviews-home .reviews {
+  /* width: 90%; */
+  max-width: 400px;
+  margin: auto;
+  /* align-items: center; */
+  /* justify-content: center; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: nowrap;
+  align-items: normal;
+  text-align: start;
+}
+
+.reviews-home .reviews .review {
+  /* width: 100%; */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  /* margin: 10px; */
+  padding: 15px;
+  /* align-items: start; */
+}
+
+.review .perfil {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Raleway";
+  font-weight: 400;
+}
+
+.perfil div div {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.circle {
+  display: inline-block;
+  background-color: #c4c4c4;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  /* margin: 0; */
+  /* position: fixed; */
+}
+
+.perfil p {
+  color: #ea9459;
+}
+
+.perfil .name {
+  font-weight: 600;
+  color: #333333;
+}
+
+.perfil .ubication {
+  color: #999999;
+}
+
+.review .comment {
+  font-style: italic;
+  color: #999999;
+}
+
+/** ESTILOS PARA EL PIE DE PAGINA  */
+
+footer {
+  /* background-color: #FFFFFF; */
+  border-top: 2px solid #d8d8d8;
+  /* max-width: 100vw; */
+  /* width: 100%; */
+  /* position: fixed; */
+  /* bottom: 0; */
+  /* right: 0; */
+  /* left: 0; */
+}
+
+footer .information div a {
+  display: block;
+}
+
+footer .information {
+  /* margin: 50px; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* align-items: start; */
+  justify-content: space-around;
+  padding: 20px;
+  /* padding-right: 200px; */
+}
+
+footer .information .hotel {
+  /* min-width: 300px; */
+  max-width: 300px;
+}
+
+footer .information .links {
+  /* min-width: 200px; */
+  max-width: 100px;
+}
+
+footer .information .partners {
+  /* min-width: 200px; */
+  max-width: 150px;
+}
+
+.social-networks {
+  background-color: var(--principal-color);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5px 30px;
+}
+
+.copyright {
+  max-width: 500px;
+  /* min-width: 300px; */
+}
+
+.icons {
+  min-width: fit-content;
+}
+
+@media screen and (min-width: 768px) {
+
+  .burger {
+    display: none; 
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    height: max-content;
+    opacity: 1;
+    visibility: visible;
+    translate: 0 0;
+    
+    transition: none;
+  }
+
+  nav .container {
+    padding: 25px 40px;
+    flex-direction: column;
+    align-items: end;
+
+    height: fit-content;
+  }
+
+  nav ul {
+    margin: 0;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: end; */
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  .header-home h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-home h1 span {
+    font-size: 5rem;
+  }
+
+  .header-home p {
+    font-size: 1.2rem;
+    max-width: 40%;
+  }
+
+  .reserve-button {
+    font-size: 1.2rem;
+  }
+
+  .welcome-home {
+    flex-direction: inherit;
+    margin: 5%;
+  }
+
+  .welcome-home img {
+    /* width: 70%; */
+    min-height: 50%;
+  }
+
+  .welcome-home .welcome-text {
+    width: 50%;
+  }
+
+  .welcome-home .welcome-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .welcome-home .welcome-text p {
+    font-size: 1.4rem;
+  }
+
+  .reviews-home .reviews {
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: none;
+  }
+
+  .review {
+    width: fit-content;
+    /* width: 30%; */
+    min-width: 300px;
+  }
+}
